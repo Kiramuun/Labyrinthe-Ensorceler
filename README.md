@@ -15,5 +15,7 @@ A vous de trouver la sortie, peut etre qu'une de c'est porte Magique sera le rac
      il pourrais y avoir un Pixel Fantome qui vous ferais revenir avant cette boucle.
   </details>
 
+  
+  
   A vous decouvrir la sortie, aurait vous de la chance ou resterais vous piéger! Mouahhahah!!!
   </details>

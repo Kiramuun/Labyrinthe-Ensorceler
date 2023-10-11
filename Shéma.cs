@@ -1,4 +1,6 @@
-﻿string LabyEnsorceler = "╔═════════╦════╦════════════════════════╥════════╗" +//0 a 49
+﻿using System.Security.Cryptography;
+
+string LabyEnsorceler = "╔═════════╦════╦════════════════════════╥════════╗" +//0 a 49
                         "║░░░░░░░░░╢░░░░║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║" +//50 a 99
                         "║░░░░░░░░░╠════╝░░░░╔════╗░░░══════════╗░░░░░║░░░║" +//100 a 149
                         "║░░░░S░░░░║░░░░░░░░░║░░░░║░░░░░░░░░░░░░║░░░░░║░░░║" +//150 a 199
@@ -24,3 +26,26 @@ const int LongueurX = 899,
 
 Console.WriteLine(LabyEnsorceler[899]);
 
+string FormeJoueur = "■";
+int Joueur = Entrée;
+
+if (fleche droite presser)
+{
+    Joueur = Joueur + 1;
+    if (Joueur == casevide)
+    {
+        Joueur avance
+    }
+    else
+    {
+        if(Joueur == PorteMagique)
+        {
+            Joueur avance
+        }
+        else
+        {
+            Joueur ne bouge pas
+        }
+    }
+    
+}

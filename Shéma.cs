@@ -24,28 +24,84 @@ const int LongueurX = 899,
           Entrée = 400,
           Sortie = 849;
 
-Console.WriteLine(LabyEnsorceler[899]);
+ConsoleKeyInfo c = Console.ReadKey(true);
+ConsoleKey Right = c.Key,
+           Left = c.Key,
+           Up = c.Key,
+           Down = c.Key,
+           Enter = c.Key;
+
+int Murs = 0,
+    Position = 0;
+
+while (LabyEnsorceler.Length == Position)
+{
+    if ((LabyEnsorceler[Position] == '╔' )|(LabyEnsorceler[Position] == '╗') | (LabyEnsorceler[Position] == '╝')|(LabyEnsorceler[Position] == '╚') | (LabyEnsorceler[Position] == '║') | (LabyEnsorceler[Position] == '═')| (LabyEnsorceler[Position] == '█') | (LabyEnsorceler[Position] == '╣') | (LabyEnsorceler[Position] == '╦') | (LabyEnsorceler[Position] == '╩') | (LabyEnsorceler[Position] == '╠'))
+    {
+        Murs++;
+        Position++;
+    }
+    else { Position++; }
+}
 
 string FormeJoueur = "■";
-int Joueur = Entrée;
+int PositionJoueur = Entrée;
 
-if (fleche droite presser)
+if(Enter == ConsoleKey.Enter)
 {
-    Joueur = Joueur + 1;
-    if (Joueur == casevide)
+    while(true)
     {
-        Joueur avance
-    }
-    else
-    {
-        if(Joueur == PorteMagique)
+        
+        if (Right == ConsoleKey.RightArrow)
         {
-            Joueur avance
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur + 0;
+            }
+            else { PositionJoueur = PositionJoueur + 1; }
         }
-        else
+        if (Left == ConsoleKey.LeftArrow)
         {
-            Joueur ne bouge pas
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur - 0;
+            }
+            else { PositionJoueur = PositionJoueur - 1; }
+        }
+        if (Up == ConsoleKey.UpArrow)
+        {
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur - 0;
+            }
+            else { PositionJoueur = PositionJoueur - 50; }
+        }
+        if (Down == ConsoleKey.DownArrow)
+        {
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur + 0;
+            }
+            else { PositionJoueur = PositionJoueur + 50; }
         }
     }
-    
 }
+
+Console.WriteLine("╔═════════╦════╦════════════════════════╥════════╗\n" +//0 a 49
+                        "║░░░░░░░░░╢░░░░║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║\n" +//50 a 99
+                        "║░░░░░░░░░╠════╝░░░░╔════╗░░░══════════╗░░░░░║░░░║\n" +//100 a 149
+                        "║░░░░S░░░░║░░░░░░░░░║░░░░║░░░░░░░░░░░░░║░░░░░║░░░║\n" +//150 a 199
+                        "║░░░░░░░░░║░░░░░░░░░║░░░░╚═════════════╣░░░░░║░░░║\n" +//200 a 249
+                        "║░░░░░░░░░║░░░░╔════╣░░░░░░░░░░░░░░░░░░║░░░░░║░░░║\n" +//250 a 299
+                        "╠═════════╝░░░░║░░░░╚═════════════╗░░░░║░░░░░║░░░║\n" +//300 a 349
+                        "║░░░░░░░░░░░░░░┤░░░░░░░░░░░░░░░░░░║░░░░░░░░░░║░░░║\n" +//350 a 399
+                        "▒░░░╔════════╦═╩═════░░░░════╦════╣░░░╔══════╣░░░║\n" +//400 a 449
+                        "║░░░║░░░░░░░░║░░░░░░░░░░░░░░░║░░░░╠═══╝░░░░░░║░░░║\n" +//450 a 499
+                        "║░░░║░░╔══╗░░║░░░░░╔══╦═╥═╦══╣░░░░║░░░░░░░░░░║░░░║\n" +//500 a 549
+                        "║░░░║░░║██║░░║░░░░░║██║░░░║██║░░░░║░░░░╔════╧╣░░░║\n" +//550 a 599
+                        "║░░░╚┬═╩══╩╨═╣░░░░░║██║░░░║██║░░░░║░░░░║████S║░░░║\n" +//600 a 649
+                        "║░░░░░░░░░░░░║░░░░░║██║░░░║██║░░░░║░░░░╚═════╝░░░║\n" +//650 a 699
+                        "║░░░░╔═══╗░░░║░░░░░║██║░░░║██║░░░░░░░░░░░░░░░░░░░║\n" +//700 a 749
+                        "║░░░░╚═══╝░░░║░░░░░╚══╩═══╩══╩══╦════════════════╣\n" +//750 a 799
+                        "║░░░░░░░░░░░░║░░░░░░░░░░░░░░░░░░┤░░░░░░░░░░░░░░░░▒\n" +//800 a 849
+                        "╚════════════╩══════════════════╩════════════════╝\n");

@@ -61,4 +61,37 @@ switch (Joueur)
         Joueur == PositionDuBas
     break;
 }
+
+if (Right == ConsoleKey.RightArrow)
+        {
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur + 0;
+            }
+            else { PositionJoueur = PositionJoueur + 1; }
+        }
+        if (Left == ConsoleKey.LeftArrow)
+        {
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur - 0;
+            }
+            else { PositionJoueur = PositionJoueur - 1; }
+        }
+        if (Up == ConsoleKey.UpArrow)
+        {
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur - 0;
+            }
+            else { PositionJoueur = PositionJoueur - 50; }
+        }
+        if (Down == ConsoleKey.DownArrow)
+        {
+            if (PositionJoueur == Murs)
+            {
+                PositionJoueur = PositionJoueur + 0;
+            }
+            else { PositionJoueur = PositionJoueur + 50; }
+        }
 */

@@ -27,7 +27,9 @@ const int LongueurX = 899,
 
 int PositionJoueur = Entrée;
 int Murs = 0,
-        Position = 0;
+    Position = 0;
+
+while(PositionJoueur == Murailles)
 
 Main();
 
@@ -42,17 +44,6 @@ void Intro()
 void Main()
 {
     Intro();
-
-
-    while (LabyEnsorceler.Length == Position)
-    {
-        if ((LabyEnsorceler[Position] == '╔') | (LabyEnsorceler[Position] == '╗') | (LabyEnsorceler[Position] == '╝') | (LabyEnsorceler[Position] == '╚') | (LabyEnsorceler[Position] == '║') | (LabyEnsorceler[Position] == '═') | (LabyEnsorceler[Position] == '█') | (LabyEnsorceler[Position] == '╣') | (LabyEnsorceler[Position] == '╦') | (LabyEnsorceler[Position] == '╩') | (LabyEnsorceler[Position] == '╠'))
-        {
-            Murs++;
-            Position++;
-        }
-        else { Position++; }
-    }
 
     string FormeJoueur = "■";
     
@@ -96,39 +87,21 @@ void Input()
                Down = c.Key,
                Enter = c.Key;
 
-    if (Enter == ConsoleKey.Enter)
+    if (Right == ConsoleKey.RightArrow) { PositionJoueur = PositionJoueur + 1; }
+    if (Left == ConsoleKey.LeftArrow) { PositionJoueur = PositionJoueur - 1; }
+    if (Up == ConsoleKey.UpArrow) { PositionJoueur = PositionJoueur - 50; }
+    if (Down == ConsoleKey.DownArrow) { PositionJoueur = PositionJoueur + 50; }
+}
+
+void Murailles()
+{
+    while (LabyEnsorceler.Length == Position)
     {
-        if (Right == ConsoleKey.RightArrow)
+        if ((LabyEnsorceler[Position] == '╔') | (LabyEnsorceler[Position] == '╗') | (LabyEnsorceler[Position] == '╝') | (LabyEnsorceler[Position] == '╚') | (LabyEnsorceler[Position] == '║') | (LabyEnsorceler[Position] == '═') | (LabyEnsorceler[Position] == '█') | (LabyEnsorceler[Position] == '╣') | (LabyEnsorceler[Position] == '╦') | (LabyEnsorceler[Position] == '╩') | (LabyEnsorceler[Position] == '╠'))
         {
-            if (PositionJoueur == Murs)
-            {
-                PositionJoueur = PositionJoueur + 0;
-            }
-            else { PositionJoueur = PositionJoueur + 1; }
+            Murs++;
+            Position++;
         }
-        if (Left == ConsoleKey.LeftArrow)
-        {
-            if (PositionJoueur == Murs)
-            {
-                PositionJoueur = PositionJoueur - 0;
-            }
-            else { PositionJoueur = PositionJoueur - 1; }
-        }
-        if (Up == ConsoleKey.UpArrow)
-        {
-            if (PositionJoueur == Murs)
-            {
-                PositionJoueur = PositionJoueur - 0;
-            }
-            else { PositionJoueur = PositionJoueur - 50; }
-        }
-        if (Down == ConsoleKey.DownArrow)
-        {
-            if (PositionJoueur == Murs)
-            {
-                PositionJoueur = PositionJoueur + 0;
-            }
-            else { PositionJoueur = PositionJoueur + 50; }
-        }
+        else { Position++; }
     }
 }

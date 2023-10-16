@@ -1,7 +1,7 @@
 # Labyrinthe-Ensorceler
-**Labyrinthe Magique assez simple au premier abord mais contenant des porte magique plus ou moins cacher a vous de trouver les bon Pixels Fantomes pour ouvrir de nouveaux passage vers d'autre horizons.
+<strong>Labyrinthe Magique assez simple au premier abord mais contenant des porte magique plus ou moins cacher a vous de trouver les bon Pixels Fantomes pour ouvrir de nouveaux passage vers d'autre horizons.
 
-A vous de trouver la sortie, peut etre qu'une de c'est porte Magique sera le racourcie ultime ? ou peut etre un piege...** 
+A vous de trouver la sortie, peut etre qu'une de c'est porte Magique sera le racourcie ultime ? ou peut etre un piege...
 
 <details>
    <summary>/!\Spoiler Alert/!\</summary>
@@ -19,3 +19,4 @@ A vous de trouver la sortie, peut etre qu'une de c'est porte Magique sera le rac
   
   A vous decouvrir la sortie, aurait vous de la chance ou resterais vous piéger! Mouahhahah!!!
   </details>
+</strong>

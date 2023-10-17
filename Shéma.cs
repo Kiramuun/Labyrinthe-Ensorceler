@@ -25,11 +25,11 @@ const int LongueurX = 899,
           Entrée = 400,
           Sortie = 849;
 
-int PositionJoueur = Entrée,
-    Murs = 0,
-    Position = 0,
-    Destination = PositionJoueur + 1 | PositionJoueur + 50 | PositionJoueur - 1 | PositionJoueur - 50;
+int PositionJoueur = Entrée;
+int Murs = 0,
+    Position = 0;
 
+/*while(PositionJoueur == Murailles)*/
 while (LabyEnsorceler.Length == Position)
 {
     if ((LabyEnsorceler[Position] == '╔') | (LabyEnsorceler[Position] == '╗') | (LabyEnsorceler[Position] == '╝') | (LabyEnsorceler[Position] == '╚') | (LabyEnsorceler[Position] == '║') | (LabyEnsorceler[Position] == '═') | (LabyEnsorceler[Position] == '█') | (LabyEnsorceler[Position] == '╣') | (LabyEnsorceler[Position] == '╦') | (LabyEnsorceler[Position] == '╩') | (LabyEnsorceler[Position] == '╠'))
@@ -102,7 +102,11 @@ void Input()
     if (Down == ConsoleKey.DownArrow) { PositionJoueur = PositionJoueur + 50; }
 }
 
-void Murailles()
+/*void Murailles()
 {
     
 }
+
+if (Right == ConsoleKey.RightArrow) { PositionJoueur = PositionJoueur + 1;
+        if (PositionJoueur == LabyEnsorceler[Murs]) { PositionJoueur = PositionJoueur+0; } }
+ */
